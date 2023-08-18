@@ -43,12 +43,12 @@ export const Navbar = () => {
                         Naruto
                     </NavLink>
 
-                    {/* <NavLink 
+                    <NavLink 
                         className= { ({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''} `} 
                         to="/Search"
                     >
                         Search
-                    </NavLink> */}
+                    </NavLink>
                 </div>
             </div>
 

@@ -8,3 +8,26 @@ REACT ROUTER
 
 * FUNCTIONAL COMPONENT
   - Navigate =   
+
+
+  clase 199 - boton de return, estilos 
+  clase 201 - animate.css
+  clase 203 - query parameters
+
+  Navigate es un componente, que nos redirecciona cuando es renderizado. Por otro lado useNavigate es un hook, que nos permite navegar programaticamente de esta manera solo hacemos la navegación bajo determinadas condiciones. Por ejemplo el usuario hace click en un boton.
+
+
+hook de react
+useMemo = memoriza valores
+useCallback  = memoriza funciones
+
+
+
+sintaxis de bootstrap es: con-pepito-
+sintaxis animate.css es: animate__animated seguido de la animecion uqe queramos ej: animate__animated animate__bounce
+
+
+.col
+
+query parameter
+paquete yarn add query-string : se utiliza para extraer todo lo uqe este en un objeto search cl 203
