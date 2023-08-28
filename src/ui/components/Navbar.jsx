@@ -1,13 +1,20 @@
 
-  import { Link, NavLink, useNavigate } from 'react-router-dom';
+  import { useContext } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 
 export const Navbar = () => {
+
+    const {logged, user, logoutUser} = useContext(AuthContext);
+
+    console.log(logged);
 
     const navigate = useNavigate();
 
 
     const onLogout = () =>{
+        logoutUser();
         navigate('/login', {  //navegar a... se puede enviar un objeto con el replace en true, para que remplace la ruta en la q me encuentro 
             replace:true
         });
@@ -56,12 +63,13 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
 
                 <span className='nav-item nav-link text-primary'>
-                  Encito precioso 
+                  {user?.name}
                 </span>
 
                 <button
                 className='nav-item nav-link btn'
                 onClick={onLogout}
+                
                 >
                   LogOut
                 </button>

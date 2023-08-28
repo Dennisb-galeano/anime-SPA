@@ -1,21 +1,36 @@
 import { AnimeRoutes } from "../routes/AnimeRoutes"
-import {LoginPage} from "../auth/pages/LoginPage"
-import { Navbar } from "../ui/components/Navbar"
+import { LoginPage } from "../auth/pages/LoginPage"
 import { Routes, Route } from "react-router-dom"
+import { PrivateRoute } from "./PrivateRoute"
+import { PublicRoute } from "./PublicRoute"
 
 
 
 export const AppRouter = () => {
   return (
     <>
-    <Routes>
+      <Routes>
 
-      <Route path='login' element={<LoginPage/>} />
+        <Route path='/login' element={
+          <PublicRoute>
+            <LoginPage />
+          {/* <Route path='/*' element={<AnimeRoutes/> }/> */} {/* esta es la sgunda forma de hacerlo*/}
 
-      <Route path='/*' element={<AnimeRoutes/> }/>
+          </PublicRoute>
+        }
+        />
+
+        <Route path='/*' element={
+          <PrivateRoute>
+            <AnimeRoutes />
+          </PrivateRoute>
+        } />
 
       </Routes>
     </>
 
   )
 }
+
+
+//la ruta que necesito proteger es path='/*',para eso se crea 

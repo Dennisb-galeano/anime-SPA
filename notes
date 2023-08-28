@@ -13,6 +13,7 @@ REACT ROUTER
   clase 199 - boton de return, estilos 
   clase 201 - animate.css
   clase 203 - query parameters
+  clase 205 - mostrar mensajes condicionales
 
   Navigate es un componente, que nos redirecciona cuando es renderizado. Por otro lado useNavigate es un hook, que nos permite navegar programaticamente de esta manera solo hacemos la navegación bajo determinadas condiciones. Por ejemplo el usuario hace click en un boton.
 
