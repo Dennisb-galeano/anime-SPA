@@ -32,3 +32,12 @@ sintaxis animate.css es: animate__animated seguido de la animecion uqe queramos 
 
 query parameter
 paquete yarn add query-string : se utiliza para extraer todo lo uqe este en un objeto search cl 203
+
+
+
+
+
+este estilo en css white-space: pre-wrap; me ayuda a realizar un salto de linea en un texto xml con el 'ndondequiero el espacio.
+
+
+row-cols-sm-3  en hero card Anidación en bootstrap por grupods de filas en una misma linea

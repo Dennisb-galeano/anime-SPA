@@ -1,14 +1,13 @@
-import { Navigate, useParams,Link } from "react-router-dom";
+import { Navigate, useParams, Link } from "react-router-dom";
 import { getAnimeById } from "../helpers/getAnimeById";
 import { useMemo } from "react";
-
 
 
 export const CharacterPage = () => {
 
   const { id } = useParams(); //const, params que desestrcutura el id de animes
 
-  const anime = useMemo( () => getAnimeById(id));  [id]
+  const anime = useMemo(() => getAnimeById(id));[id]
   //el use memo dispta una fn,, el callbak get.. las dependencias seran el [id], cuando el id cambie
 
 
@@ -23,33 +22,44 @@ export const CharacterPage = () => {
 
   return (
     <>
-      <div className="row mt-5 animate__animated animate__fadeInLeft">
-        <div className="col-4">
-          <img
-            src={`/public/assets/anime/${id}.jpg  `}
-            alt={anime.character}
-            className="img-thumbnail"
-          />
 
-          <div>
-            <div className="col-8">
-              <h3>{anime.character}</h3>
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item"> <b>Publisher by:  </b> {anime.publisher}</li>
-                <li className="list-group-item"> <b>First appeaerance: </b> {anime.first_appearance}</li>
-                <li className="list-group-item"> <b>Current Range:  </b> {anime.current_range}</li>
-                <li className="list-group-item"> <b>Hability:  </b> {anime.hability}</li>
+      <div className="container">
+        <div className="titles  text-center animate__animated animate__fadeInLeft">
+          <h1 className=" display-3 lh-lg">{anime.character}</h1>
+        </div>
 
-              </ul>
+        <div className="character-description mt-4 animate__animated animate__fadeInLeft" >
+          <div className="col-4 mt-4">
+            <img
+              src={`/public/assets/anime/${id}.jpg  `}
+              alt={anime.character}
+              className="img-thumbnail shadow mt-5"
+            />
+            <div className="anime-description position-absolute top-0">
+              <h4 className="mt-2"> <strong>Description </strong> </h4>
+              <br />
+              <div>{anime.description}</div>
 
-              <h5 className="mt-3"> characters </h5>
-              <p>{ }</p>    {/* pendiente charctersistics en parrafo  */}
-
-              <Link to={-1} className='btn btn-outline-primary'>Return</Link>   {/* este link remplaza el button, y la importacion del useNavigate y la creacion de fn..s */}
+              <hr />
+              <Link to={-1} className='btn btn-secondary btn-lg mt-4 shadow p-3 mb-5'>  ..Return.. </Link>   {/* este link remplaza el button, y la importacion del useNavigate y la creacion de fn..s */}
             </div>
 
-          </div>
 
+            <div className="character-list mb-5 ">
+              <div>
+                <ul className="list-group list-group-flush shadow">
+                  <li className="list-group-item"> <b>Publisher by:  </b> {anime.publisher}</li>
+                  <li className="list-group-item"> <b>First appeaerance: </b> {anime.first_appearance}</li>
+                  <li className="list-group-item"> <b>Current Range:  </b> {anime.current_range}</li>
+                  <li className="list-group-item"> <b>Hability:  </b> {anime.hability}</li>
+                  <li className="list-group-item"> <b>Nature:  </b> {anime.nature}</li>
+                  <li className="list-group-item"> <b>clan:  </b> {anime.clan}</li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

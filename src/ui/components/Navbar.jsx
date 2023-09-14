@@ -24,7 +24,7 @@ export const Navbar = () => {
 
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
+        <nav className="contain flex navbar navbar-expand-sm navbar-dark bg-dark p-2 fixed-top">
             
             <Link 
                 className="navbar-brand" 

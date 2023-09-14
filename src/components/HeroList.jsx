@@ -1,26 +1,29 @@
 
 import { getAnimeByPublisher } from "../helpers/getAnimeByPublisher";
 import { HeroCard } from "./HeroCard";
+import { useMemo } from "react";
 
 
 
-export const HeroList = ({publisher}) => {
+export const HeroList = ({ publisher }) => {
 
-  const animes = getAnimeByPublisher(publisher);
-  console.log(animes);
+  const animes = useMemo(() => getAnimeByPublisher(publisher), [publisher]);
+  // console.log(animes);
+
   return (
-    <div className=" container text-center row row-cols-2">
-      {
-        animes.map(anime => (
-          <HeroCard
-           key={anime.id} 
-           {...anime}
-          />
+    <div className=" row row-cols-sm-3">
 
-        ))
+        {
+          animes.map(anime => (
+            <HeroCard
+              key={anime.id}
+              {...anime}
+            />
+
+          ))
       }
+      </div>
 
-    </div>
   )
 }
 

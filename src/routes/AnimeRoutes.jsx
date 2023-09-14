@@ -4,19 +4,12 @@ import { OnePeacePage } from '../pages/OnePeacePage';
 import { NarutoPage } from '../pages/NarutoPage';
 import { SearchPage } from "../pages/SearchPage";
 import { CharacterPage } from "../pages/CharacterPage";
-import { Navbar } from "../ui/components/Navbar";
-
 
 
 
 export const AnimeRoutes = () => {
   return (
     <>
-
-      <Navbar />
-
-      <div className="container">
-
         <Routes>
 
           <Route path='OnePeace' element={<OnePeacePage />} />
@@ -30,7 +23,6 @@ export const AnimeRoutes = () => {
 
         </Routes>
 
-      </div>
 
     </>
   )
