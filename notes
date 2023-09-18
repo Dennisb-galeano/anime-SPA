@@ -41,3 +41,5 @@ este estilo en css white-space: pre-wrap; me ayuda a realizar un salto de linea 
 
 
 row-cols-sm-3  en hero card Anidación en bootstrap por grupods de filas en una misma linea
+
+scrolltotop: fc que sirve para que el componente se muestre siempre desde el principio de la pag. se debe colocar en la parte alta del router app

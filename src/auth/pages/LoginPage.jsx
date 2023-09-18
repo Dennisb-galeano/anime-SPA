@@ -11,7 +11,7 @@ export const LoginPage = () => {
 
   const onLogin = () => {
 
-    loginUser('Encito precioso');
+    loginUser('Bienvenidos');
 
     navigate('/', {
       replace: true

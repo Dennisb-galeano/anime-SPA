@@ -1,8 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 
-import { HeroCard } from "../components/HeroCard";
 import { useForm } from "../hooks/useForm";
+import { HeroCard } from "../components/HeroCard";
 import { getAnimeByName } from "../helpers/getAnimeByName";
 import { Navbar } from "../ui/components/Navbar";
 
