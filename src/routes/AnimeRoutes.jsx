@@ -18,7 +18,7 @@ export const AnimeRoutes = () => {
           <Route path="search" element={<SearchPage />} />
           <Route path="character/:id" element={<CharacterPage />} />
 
-          <Route path="/" element={ <Navigate to="/OnePeace"/> }    />
+          <Route path="/" element={ <Navigate to="/login"/> }    />
 
 
         </Routes>

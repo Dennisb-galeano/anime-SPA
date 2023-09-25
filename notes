@@ -43,3 +43,7 @@ este estilo en css white-space: pre-wrap; me ayuda a realizar un salto de linea 
 row-cols-sm-3  en hero card Anidación en bootstrap por grupods de filas en una misma linea
 
 scrolltotop: fc que sirve para que el componente se muestre siempre desde el principio de la pag. se debe colocar en la parte alta del router app
+
+text-muted - aclaraa el texto
+
+el archivo _redirects en public, cuando hay error en netifly: lo que hace es decirle a react que haga match con todos los path que se vayan a escribir para que despues los pase por la raiz del proyecto,,, por el DOMINIO, Y  si hay coincidencias con las rutas configuradas en el route, me muestre las paginas correctamente. con un 200

@@ -14,21 +14,24 @@ export const HeroCard = ({
 
 }) => {
 
-  const cardImagesUrl = `assets/anime/${id}.jpg`
+  const cardImagesUrl = `/assets/anime/${id}.jpg`
 
   return (
-    <div className="col animate__animated animate__fadeIn " >
+    <div className="row-cols-md-4" >
+      <div className="column">
       <div className="card">
 
         <div >
+
           <div className="card" >
             <img src={cardImagesUrl} className="card-img" alt={character} />
           </div>
 
-          <div className="card-body  text-center shadow">
+
+          <div className="card-body text-center shadow">
             <div>
               <h5 className="card-title "> <em>{character} </em> </h5>
-              <p className="card-text text-muted">{publisher} </p>
+              <p className="card-text">{publisher} </p>
             </div>  
              <div className="more-info"> 
             <Link to={`/character/${id} `}><h6>Más info..</h6></Link>
@@ -38,7 +41,7 @@ export const HeroCard = ({
         </div>
 
       </div>
-
+      </div>
     </div>
   )
 }

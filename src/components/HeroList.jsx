@@ -11,7 +11,7 @@ export const HeroList = ({ publisher }) => {
   // console.log(animes);
 
   return (
-    <div className=" row row-cols-sm-3">
+    <div className=" animate__animated animate__fadeIn">
 
         {
           animes.map(anime => (
@@ -21,8 +21,10 @@ export const HeroList = ({ publisher }) => {
             />
 
           ))
-      }
-      </div>
+        }
+      
+    </div>
+
 
   )
 }

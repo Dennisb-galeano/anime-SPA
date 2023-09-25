@@ -27,12 +27,12 @@ export const SearchPage = () => {
 
   const onSearchSubmit = (event) => {
     event.preventDefault();
-    // if (searchText.trim().length <= 1) return; //validacion para que el form, no busque si la condicion no se cumple|
+    if (searchText.trim().length <= 1) return; //validacion para que el form, no busque si la condicion no se cumple|
 
     navigate(`?q=${searchText}`); //?q es un query parameter
     // console.log({ searchText });
-
   }
+
 
   return (
     <>
@@ -57,14 +57,18 @@ export const SearchPage = () => {
                 <input
                   type="text"
                   placeholder="Search a character"
-                  className="form-control shadow mb-5 mt-5 bg-white rounded"
+                  className="Search-form-control shadow mb-5 mt-5"
                   name="searchText"
                   autoComplete="off"
                   value={searchText}
                   onChange={onInputChange}
                 />
 
-                <button className="search-button shadow btn btn-secondary mb-5 mt-5" >
+                <button 
+                  className="search-button shadow btn btn-secondary mb-5 " 
+                  // onClick={()=> {alert ('Ingresa al menos un caracter'); } }
+                  
+                  >
                   Search
                 </button>
               </form>
@@ -81,7 +85,7 @@ export const SearchPage = () => {
             No character with <b>{q}</b>
           </div>
 
-          <div className="card-image row row row-cols-sm-3 mt-3">
+          <div className="card-image">
             {/* el segundo parentesis en el map se coloca para regresar el anime implicitamente */}
             {
               animes.map(anime => (

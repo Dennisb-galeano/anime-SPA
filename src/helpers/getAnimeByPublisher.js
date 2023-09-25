@@ -15,7 +15,6 @@ export const getAnimeByPublisher = ( publisher ) => {
 
 
 
-
 /*
    se va a utilizar la data de anime, mi arreglo de anime 
    1. importar la data (anime)
